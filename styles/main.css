@@ -10,10 +10,12 @@
     --btn-text: #000000;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -178,8 +180,10 @@ input[type='color']::-webkit-color-swatch {
     box-shadow: gray;
   }
 
+
   .grid-element {
     user-select: none;
+    border: 1px solid black;
   }
 
   .footer {
