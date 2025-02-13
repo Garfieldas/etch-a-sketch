@@ -9,6 +9,9 @@
 
 ## Live preview
 
+- project-link: https://garfieldas.github.io/etch-a-sketch/
+
+
 ![Preview Image](https://i.ibb.co/20qs79PQ/Screenshot-2025-02-13-at-11-08-04.png)
 
 
