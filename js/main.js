@@ -8,6 +8,7 @@ const clearBtn = document.querySelector('#clearBtn');
 const colorBtn = document.querySelector('#colorBtn');
 const rainbowBtn = document.querySelector('#rainbowBtn');
 const ereaserBtn = document.querySelector('#ereaserBtn');
+const saveBtn = document.querySelector('#saveBtn');
 
 const buttons = [colorBtn, rainbowBtn, ereaserBtn];
 
@@ -104,7 +105,6 @@ let activeBtn = (e) => {
         }
     })
 }
-    
 
 //Event Listeners
 
@@ -129,6 +129,17 @@ board.addEventListener("click", (e) => {
 
 
 clearBtn.addEventListener("click", clearBoard);
+
+saveBtn.addEventListener("click", () => {
+    html2canvas(board).then(canvas => {
+        let imgData = canvas.toDataURL("image/png");
+
+        let link = document.createElement("a");
+        link.href = imgData;
+        link.download = "my-drawing.png";
+        link.click();
+    });
+});
 
 window.addEventListener("load", resize);
 
